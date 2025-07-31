@@ -1,69 +1,70 @@
-# AI Rehab Companion
+# 🏋️‍♂️ AI Rehab Companion – Your Personal AI-Powered Physiotherapy Assistant
 
-An AI-powered full-stack web application designed to act as a personal rehabilitation and exercise assistant. It leverages real-time computer vision to analyze user form during exercises, provides immediate feedback, counts repetitions, and offers voice guidance to help users perform movements correctly.
+**AI Rehab Companion** is a real-time, full-stack web application that transforms your webcam into a smart personal trainer for rehabilitation and fitness. Powered by computer vision and voice interaction, it **analyzes exercise form**, **counts reps**, and gives **instant feedback and guidance** — all from the comfort of your home.
 
-This project showcases the integration of modern frontend frameworks (React with Material UI) with a high-performance Python backend (FastAPI) for real-time AI inference (MediaPipe).
+> 💡 Built for physiotherapy patients, fitness enthusiasts, and rehab professionals, this intelligent assistant ensures users perform movements safely and correctly.
 
-## Features
+---
 
-* **Real-time Pose Estimation:** Utilizes Google's MediaPipe to detect and track 33 key anatomical landmarks on the user's body from a live webcam feed.
+## 🚀 Key Features
 
-* **Exercise Selection:** Allows users to choose between different exercises (currently Squats and Push-ups).
+### 🎯 Real-Time Pose Detection  
+- Detects and tracks **33 anatomical landmarks** using **MediaPipe Pose**.  
+- Works directly with your webcam — no special equipment needed.
 
-* **Rule-Based Form Analysis:** Provides immediate, contextual feedback on exercise form (e.g., "Go deeper!", "Keep body straight!") based on joint angles and body positioning.
+### 🧠 Smart Exercise Analysis  
+- Tracks joint angles to **analyze form** for exercises like **Squats** and **Push-ups**.  
+- Provides real-time feedback like _“Go deeper!”_ or _“Keep body straight!”_ using rule-based logic.
 
-* **Automatic Repetition Counting:** Tracks and displays completed repetitions for the selected exercise.
+### 🔢 Automatic Repetition Counter  
+- Counts reps accurately using joint movement logic.  
+- Displays live rep count on screen.
 
-* **Voice Guidance:** Speaks the "Current Action" feedback aloud, making the assistant more interactive and allowing users to focus on their form without constantly looking at the screen.
+### 🗣️ Voice Feedback  
+- Integrated **Text-to-Speech** speaks current action aloud, so users can **focus on movement, not the screen**.
 
-* **Responsive & Attractive UI:** Built with Material UI for a clean, modern, and adaptive user interface.
+### 🧘 Clean, Responsive UI  
+- Built with **React** and **Material UI** for a sleek, mobile-friendly interface.  
+- Exercise selection, rep tracking, and feedback are all clearly visible and intuitive.
 
-* **Real-time Communication:** Uses WebSockets for low-latency streaming of video frames and feedback between the frontend and backend.
+### 🔌 Real-Time Communication  
+- Utilizes **WebSockets** for low-latency video stream processing between frontend and backend.
 
-## Tech Stack
+---
 
-**Frontend (Client-side):**
+## 🧰 Tech Stack
 
-* **React.js:** JavaScript library for building dynamic user interfaces.
+| Layer        | Technologies Used |
+|--------------|-------------------|
+| **Frontend** | React.js, Vite, Material UI, WebSockets, Web Speech API |
+| **Backend**  | Python, FastAPI, Uvicorn, MediaPipe, OpenCV, NumPy |
 
-* **Material UI (MUI):** A comprehensive React component library implementing Google's Material Design for a polished UI.
+---
 
-* **WebSockets:** Enables real-time, bidirectional communication with the backend for video streaming and feedback.
+## 📸 How It Works
 
-* **Web Speech API:** Browser-native API used for Text-to-Speech (TTS) to provide voice guidance.
+1. **User selects an exercise** (Squats or Push-ups).
+2. **Webcam feed is captured** and streamed to the backend via WebSocket.
+3. **MediaPipe** estimates pose landmarks.
+4. **Joint angles are calculated** to assess correctness.
+5. **Rules are applied** to detect posture and count repetitions.
+6. **Feedback is shown** and spoken using **Web Speech API**.
 
-* **Vite:** A fast and efficient build tool for modern web development.
+---
 
-**Backend (Server-side):**
+## ⚙️ Getting Started
 
-* **Python:** The core programming language for server logic and AI processing.
+### ✅ Prerequisites
 
-* **FastAPI:** A modern, high-performance web framework for building APIs and handling WebSockets.
+- [Python 3.8+](https://www.python.org/downloads/)
+- [Node.js & npm](https://nodejs.org/en/download/)
+- [Git](https://git-scm.com/downloads)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- A **working webcam**
 
-* **Uvicorn:** An ASGI server that runs the FastAPI application.
+### 🛠️ Installation Steps
 
-* **MediaPipe Pose:** Google's pre-trained AI model for robust human pose estimation.
-
-* **OpenCV (`cv2`):** Used for image processing tasks like decoding/encoding video frames.
-
-* **NumPy:** Fundamental library for numerical operations on pose data.
-
-## Setup Instructions
-
-Follow these steps to get the project running on your local machine.
-
-### Prerequisites
-
-* **Python 3.8+:** [Download from python.org](https://www.python.org/downloads/)
-
-* **Node.js & npm:** [Download LTS version from nodejs.org](https://nodejs.org/en/download/)
-
-* **Git:** [Download from git-scm.com](https://git-scm.com/downloads)
-
-* **Visual Studio Code (VS Code):** Recommended IDE. [Download from code.visualstudio.com](https://code.google.com/url?q=https://code.visualstudio.com/&sa=D&sntz=1&usg=AOvVaw2B176g41_zG_z0tN_d_3-B)
-
-* **Webcam:** Required for pose estimation.
-
-
-
-
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/ai-rehab-companion.git
+   cd ai-rehab-companion
