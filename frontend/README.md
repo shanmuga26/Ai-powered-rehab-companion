@@ -62,9 +62,3 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
 - A **working webcam**
 
-### 🛠️ Installation Steps
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-username/ai-rehab-companion.git
-   cd ai-rehab-companion
